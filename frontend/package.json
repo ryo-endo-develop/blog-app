@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "npm run lint:eslint -- --fix",
+    "lint:eslint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "secretlint": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'",
     "prettier-check": "prettier --cache --check .",
     "prettier-fix": "prettier --cache --write .",
-    "storybook": "storybook dev -p 6006"
+    "storybook": "storybook dev -p 6006",
+    "typecheck": "tsc -p ./tsconfig.json --noEmit"
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.16.0",

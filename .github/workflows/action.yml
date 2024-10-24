@@ -34,8 +34,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
-
       - name: Secret lint
         run: npm run secretlint
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type Check
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
