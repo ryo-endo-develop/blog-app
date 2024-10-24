@@ -2,8 +2,12 @@
 
 ```
 cd frontend
-npm install
+
+npm ci
+
 npm run dev
+
+npm run storybook
 ```
 
 # React + TypeScript + Vite
